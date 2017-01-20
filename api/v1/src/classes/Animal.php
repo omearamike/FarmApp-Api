@@ -16,7 +16,7 @@ class Animal    {
         $this->conn = $db;
     }
 
-    function animals(){ // read all animals
+    function get_animals(){ // read all animals
         $countrecords = "SELECT COUNT(*) AS totalcount FROM animal";
         $q = $this->conn->prepare($countrecords); // prepare query statement
         $q->execute(); // execute query

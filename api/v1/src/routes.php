@@ -15,7 +15,7 @@ $app->get('/{name}', function ($request, $response, $args) {
 $app->get('/api/v1/animals.json', function ($request, $response) {
 
     $animal = new Animal($this->db); // Pass DB credentials to Animal Object
-    $animals = $animal->animals();
+    $animals = $animal->get_animals();
 
     echo json_encode($animals, JSON_PRETTY_PRINT); // send the result now
 
@@ -30,7 +30,7 @@ $app->get('/api/v1/animals.json', function ($request, $response) {
 $app->get('/api/v1/feedlots.json', function ($request, $response) {
 
     $feedlot = new Feedlot($this->db); // Pass DB credentials to Animal Object
-    $feedlots = $feedlot->feedlots();
+    $feedlots = $feedlot->get_feedlots();
 
     echo json_encode($feedlots, JSON_PRETTY_PRINT); // send the result now
 
