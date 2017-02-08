@@ -37,4 +37,4 @@ $app->get('/api/v1/feedlots.json', function ($request, $response) {
     return $response->withHeader('Content-Type', 'application/json');
 });
 127.0.0.1 farmapp.localhost
-/etc/cloud/templates/hosts.tmplffjd
+/etc/cloud/templates/hosts.tmplffjdd
